@@ -29,7 +29,6 @@ resource "random_pet" "site" {
 # Creates a Netlify site linked to a GitHub repo
 resource "netlify_site" "demo" {
   name = "${var.site_prefix}-${random_pet.site.id}"
-
   repo {
     provider      = "github"
     repo_path     = var.github_repo   # e.g. "yourusername/your-repo"
