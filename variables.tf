@@ -7,7 +7,7 @@ variable "netlify_token" {
 variable "github_repo" {
   description = "The GitHub repository to link with Netlify (e.g. username/repo)"
   type        = string
-  default = "LIGHTHINGS/terraform-challenge"
+  default = "https://github.com/LIGHTHINGS/terraform-challenge.git"
 }
 
 variable "branch" {

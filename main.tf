@@ -34,7 +34,6 @@ resource "netlify_site" "demo" {
     provider      = "github"
     repo_path     = var.github_repo   # e.g. "yourusername/your-repo"
     repo_branch   = var.branch        # e.g. "main"
-    deploy_key_id = netlify_deploy_key.key.id
   }
 }
 
