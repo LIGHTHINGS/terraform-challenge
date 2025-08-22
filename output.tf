@@ -3,5 +3,7 @@ output "site_name" {
 }
 
 output "live_site_url" {
-  value = netlify_site.demo.ssl_url
+  value = netlify_site.demo.deploy_url
 }
+
+
