@@ -30,12 +30,18 @@ resource "random_pet" "site" {
 resource "netlify_site" "demo" {
   name = "${var.site_prefix}-${random_pet.site.id}"
 
+  # repo {
+  #   provider      = "github"
+  #   repo_path     = var.github_repo   # e.g. "yourusername/your-repo"
+  #   repo_branch   = var.branch        # e.g. "main"
+  #   deploy_key_id = netlify_deploy_key.key.id
+  # }
   repo {
-    provider      = "github"
-    repo_path     = var.github_repo   # e.g. "yourusername/your-repo"
-    repo_branch   = var.branch        # e.g. "main"
-    deploy_key_id = netlify_deploy_key.key.id
-  }
+  provider    = "github"
+  repo_path   = "https://github.com/LIGHTHINGS/terraform-challenge.git"
+  repo_branch = "main"
+}
+
 }
 
 # Creates a deploy key for GitHub access
